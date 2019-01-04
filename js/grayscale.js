@@ -25,7 +25,8 @@
     target: '#mainNav',
     offset: 100
   });
-    $('body').scrollspy({
+  
+    $('#contact-stanga').scrollspy({
     target: '#contact-stanga',
     offset: 100
   });
@@ -41,6 +42,5 @@
   // Collapse now if page is not at top
   navbarCollapse();
   // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
