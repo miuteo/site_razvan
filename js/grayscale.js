@@ -25,6 +25,10 @@
     target: '#mainNav',
     offset: 100
   });
+    $('body').scrollspy({
+    target: '#contact-stanga',
+    offset: 100
+  });
 
   // Collapse Navbar
   var navbarCollapse = function() {
