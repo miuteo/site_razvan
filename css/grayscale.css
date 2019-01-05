@@ -337,6 +337,14 @@ footer {
 	color: white;
 	
 }
-svg{
-
+#svg-demo{
+	display:none;
+}
+.lup{
+	color:white;
+	fill: white;
+}
+.lup-active{
+	color:white;
+	fill: white;
 }
