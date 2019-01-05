@@ -356,11 +356,6 @@
 	var progres = document.getElementById("progres");
 	 window.addEventListener("scroll", myFunction);
 	 function myFunction() {
-  var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-  var draw = length * scrollpercent;
-
-
   if(document.getElementById('about-nav').className.indexOf('active') == -1 
 	&&document.getElementById('projects-nav').className.indexOf('active') == -1
 	&& document.getElementById('contact-nav').className.indexOf('active') ==-1	){
