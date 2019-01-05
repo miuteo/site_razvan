@@ -23,7 +23,7 @@
 
   </head>
 
-  <body id="page-top" >
+  <body id="page-top" onload=myFunction()>
 
 
     <!-- Navigation -->
@@ -164,16 +164,17 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about-section text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">About me</h2>
-            <p class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus sit amet lorem dictum, nec eleifend enim hendrerit. Integer tempus mattis molestie. Aliquam erat volutpat. </p>
-          </div>
-        </div>
-        <img src="img/Poza about-01.jpg" class="img-fluid" alt="">
-      </div>
+    <section id="about" style="height: 100vh">
+		<div class="row w-100 m-0 h-100">
+ 
+			<div class="col-8" id="left-about">
+				<h2 class="text-white mb-4">About me</h2>
+				<p class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus sit amet lorem dictum, nec eleifend enim hendrerit. Integer tempus mattis molestie. Aliquam erat volutpat. </p>
+			</div>
+		<div class="col-4"id="right-about">
+		</div>
+
+		</div>
     </section>
 
     <!-- Projects Section -->
