@@ -53,7 +53,7 @@
     -webkit-transition: none;
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
   }
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -80,8 +80,16 @@
     outline: none;
     border-bottom: 0.25rem solid #64a19d;
   }
+  .container{
+	  
+  }
 }
 
+@media (min-width: 1200px){
+	#nav-container{
+		max-width: none;
+	}
+}
 .masthead {
   position: relative;
   width: 100%;
@@ -97,9 +105,8 @@
 }
 
 .masthead h1 {
-  font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2rem;
   letter-spacing: 0.8rem;
   background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
   -webkit-text-fill-color: transparent;
@@ -124,13 +131,14 @@
     padding: 0;
   }
   .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
+    font-size: 4rem;
+    line-height: 6rem;
     letter-spacing: 0.8rem;
   }
   .masthead h2 {
     max-width: 30rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+	letter-spacing: 0.5rem
   }
 }
 
@@ -164,8 +172,7 @@
 
 .about-section {
   padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+  background: background-color: rgb(18, 42, 79);
 }
 
 .about-section p {
@@ -350,7 +357,7 @@ footer {
 	display: none;
 }
 #left-about{
-	background-color: blue;
+	background-color: rgb(18, 42, 79);
 }
 
 #right-about {
