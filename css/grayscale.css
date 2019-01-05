@@ -343,8 +343,10 @@ footer {
 .lup{
 	color:white;
 	fill: white;
+	display:block;
 }
 .lup-active{
 	color:white;
 	fill: white;
+	display: none;
 }

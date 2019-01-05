@@ -23,7 +23,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" >
 
 
     <!-- Navigation -->
@@ -37,13 +37,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">ABOUT ME</a>
+              <a class="nav-link js-scroll-trigger" href="#about" id="about-nav">ABOUT ME</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">PORTOFOLIO</a>
+              <a class="nav-link js-scroll-trigger" href="#projects" id="projects-nav">PORTOFOLIO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">CONTACT</a>
+              <a class="nav-link js-scroll-trigger" href="#contact" id="contact-nav">CONTACT</a>
             </li>
           </ul>
         </div>
@@ -53,7 +53,6 @@
 	
 		<!-- left-side -->
 	<div class="contact-stanga" id="contact-stanga">
-	<p id="progres">Progres=</p>
 		<a class="nav-link js-scroll-trigger" href="#page-top">
 <svg
    width="8.3257742mm"
@@ -169,12 +168,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-            <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            <h2 class="text-white mb-4">About me</h2>
+            <p class="text-white-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquam tellus sit amet lorem dictum, nec eleifend enim hendrerit. Integer tempus mattis molestie. Aliquam erat volutpat. </p>
           </div>
         </div>
-        <img src="img/ipad.png" class="img-fluid" alt="">
+        <img src="img/Poza about-01.jpg" class="img-fluid" alt="">
       </div>
     </section>
 
@@ -362,9 +360,11 @@
 
   var draw = length * scrollpercent;
 
+	console.log(document.getElementById('about-nav').className.indexOf('active'));
 
-  document.getElementById("progres").innerHTML =scrollpercent;
-  if(scrollpercent<0.16 ){
+  if(document.getElementById('about-nav').className.indexOf('active') == -1 
+	&&document.getElementById('projects-nav').className.indexOf('active') == -1
+	&& document.getElementById('contact-nav').className.indexOf('active') ==-1	){
   document.getElementById('lup1').style.display ='none';
   document.getElementById('lup1-active').style.display ='block';
 
@@ -373,7 +373,7 @@
 	document.getElementById('lup1').style.display ='block';
   }
   
-  if(scrollpercent>=0.195 && scrollpercent<0.399 ){
+  if(document.getElementById('about-nav').className.indexOf('active') > -1){
   document.getElementById('lup2').style.display ='none';
   document.getElementById('lup2-active').style.display ='block';
 
@@ -381,7 +381,7 @@
 	document.getElementById('lup2-active').style.display ='none';
 	document.getElementById('lup2').style.display ='block';
   }
-  if(scrollpercent>=0.399 && scrollpercent<0.868 ){
+  if(document.getElementById('projects-nav').className.indexOf('active') > -1 ){
   document.getElementById('lup3').style.display ='none';
   document.getElementById('lup3-active').style.display ='block';
 
@@ -389,7 +389,7 @@
 	document.getElementById('lup3-active').style.display ='none';
 	document.getElementById('lup3').style.display ='block';
   }
-  if(scrollpercent>=0.868){
+  if(document.getElementById('contact-nav').className.indexOf('active') > -1){
   document.getElementById('lup4').style.display ='none';
   document.getElementById('lup4-active').style.display ='block';
 
@@ -398,8 +398,10 @@
 	document.getElementById('lup4').style.display ='block';
   }
   
-  
-  
+
+  function hasClass(element, className) {
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+}
   
 }
 	</script>
