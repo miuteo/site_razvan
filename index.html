@@ -250,9 +250,9 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section bg-black" style="height: 100vh">
       <div class="container align-self-center d-flex h-100">
-
-        <div class="row align-self-center w-100">
-          <div class="col-md-4 mb-3 mb-md-0">
+		<h2 class="text-white text-center">Contact</h2>
+        <div class="row align-self-center w-100" >
+          <div class="col-md-4 mx-auto d-none" id="contact-mail">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-envelope text-primary mb-2"></i>
@@ -265,7 +265,7 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-3 mb-md-0">
+          <div class="col-md-4 mx-auto d-none" id="contact-phone">
             <div class="card py-4 h-100">
               <div class="card-body text-center">
                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
@@ -357,6 +357,14 @@
   if(document.getElementById('contact-nav').className.indexOf('active') > -1){
   document.getElementById('lup4').style.display ='none';
   document.getElementById('lup4-active').style.display ='block';
+  
+  document.getElementById('contact-mail').classList.add('withBounceIn');
+  document.getElementById('contact-phone').classList.add('withBounceIn');
+   
+  document.getElementById('contact-mail').classList.remove('d-none');
+  document.getElementById('contact-phone').classList.remove('d-none');
+  
+  
 
   }else{
 	document.getElementById('lup4-active').style.display ='none';
