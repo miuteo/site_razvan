@@ -185,14 +185,21 @@
 		<div class="row">
 
 			<!-- Grid column -->
-			<div class="col-md-12 d-flex justify-content-center mb-5">
 
-				<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="all">All projects</button>
-				<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="1">Logos</button>
-				<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="2">Branding</button>
-				<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="3">Websites</button>
-				<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="4">Print</button>
+			<div class="col-md-12 d-flex justify-content-center mb-5" id="navbar-div">
+				
+					<button type="button" class="btn btn-outline-light" id="activeFilter" ><i class="fas fa-chevron-down"></i>Active filter</button>
+					<div class="navbar-portofolio">
+					<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="all">All projects</button>
+					<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="1">Logos</button>
+					<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="2">Branding</button>
+					<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="3">Websites</button>
+					<button type="button" class="btn btn-outline-light text-white waves-effect filter py-1" data-rel="4">Print</button>
+
+				</div>
+			
 </div>
+
 			</div>
 			<!-- Grid column -->
 		<div class="gallery px-5 mx-5" id="gallery">
@@ -386,6 +393,13 @@ Array.prototype.forEach.call(previouslyActive, child => {
   child.classList.remove('active'); 
 });
 
+	var portofolioButtons = document.getElementsByClassName("navbar-portofolio");
+	Array.prototype.forEach.call(portofolioButtons, child => {
+				child.classList.remove('show'); 
+			});
+document.getElementById("activeFilter").innerHTML = '<i class="fas fa-chevron-down"></i>'+this.innerHTML;
+document.getElementById("activeFilter").classList.remove('d-none');
+
 this.classList.add("active");
 $("#gallery").fadeTo(100, 0.1);
 $("#gallery div").not("."+selectedClass).fadeOut().removeClass('animation');
@@ -394,6 +408,15 @@ $("."+selectedClass).fadeIn().addClass('animation');
 $("#gallery").fadeTo(300, 1);
 }, 300);
 });
+$("#activeFilter").click(function(){
+
+	var portofolioButtons = document.getElementsByClassName("navbar-portofolio");
+	Array.prototype.forEach.call(portofolioButtons, child => {
+				child.classList.add('show'); 
+			});
+	this.classList.add('d-none');
+});
+
 });
 
 function clearActiveClass(item, index) {

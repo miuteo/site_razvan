@@ -40,6 +40,10 @@
 }
 
 @media (min-width: 992px) {
+	#activeFilter{
+		display:none;
+	}	
+	
   #mainNav {
     padding-top: 0;
     padding-bottom: 0;
@@ -107,6 +111,55 @@
 	}
 	#right-about{
 		display: none;
+	}
+	.navbar-portofolio{
+		display: none;
+		
+	}
+	.navbar-portofolio.show{
+		display: flex;
+		flex-direction: column!important;
+		position: absolute;
+		top: 0px;
+		background-color: #1e1e1e;
+ 
+		
+	}
+	#navbar-div{
+		flex-direction: column!important;
+		margin-left: auto!important;
+		margin-right: auto!important;
+		flex: 0 0 30%;
+		max-width: 30%;
+		z-index: 1000;
+	
+		
+		
+		
+	}
+	#activeFilter{
+		padding: 0;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+	}
+	.btn.btn-outline-light{
+
+		border: 0 !important;
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+	}
+	.fa-chevron-down{
+		color: #7a5014;
+	}
+	button.btn.btn-outline-light.text-white.active,button.btn.btn-outline-light.text-white:hover{
+		background-color: transparent  !important;
+		color: #7a5014 !important;
+	}
+	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover{
+		color: white;
+	}
+	.navbar-light .navbar-nav .nav-link,.navbar-light .navbar-nav .nav-link.active{
+		color: white;
 	}
 }
 
